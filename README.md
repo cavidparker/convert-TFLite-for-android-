@@ -1,7 +1,7 @@
 # convert-tflite-for-android-
 
 
-## Run this code to tensorflow :
+## Run this code to tensorflow:
 
 bazel  run -c opt  tensorflow/lite/toco:toco -- \
 --input_file=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/tflite/tflite_graph.pb \
