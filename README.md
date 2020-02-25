@@ -1,7 +1,12 @@
 # convert-tflite-for-android-
 
+## clone the git anywhere:
+git clone git@github.com:tensorflow/tensorflow.git 
 
-## Run this code to tensorflow:
+
+
+
+## Run this code to tensorflow: /home/cavid/tensorflow ( here is my path)
 
 bazel  run -c opt  tensorflow/lite/toco:toco -- \
 --input_file=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/tflite/tflite_graph.pb \
