@@ -1,12 +1,12 @@
 # convert-tflite-for-android-
+## Step 1 : run python export_tflite_ssd_graph.py 
+python export_tflite_ssd_graph.py --pipeline_config_path=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/training/ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=training/model.ckpt-70573  --output_directory=./tflite --add_postprocessing_op=true
 
-## clone the git anywhere:
+## Step 2 : clone the git anywhere in your computer:
 git clone git@github.com:tensorflow/tensorflow.git 
 
 
-
-
-## Run this code to tensorflow: /home/cavid/tensorflow ( here is my path)
+## step 3 : Run this code into tensorflow: /home/cavid/tensorflow ( here is my path) & change the input_file and output_file localion
 
 bazel  run -c opt  tensorflow/lite/toco:toco -- \
 --input_file=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/tflite/tflite_graph.pb \
@@ -19,3 +19,5 @@ bazel  run -c opt  tensorflow/lite/toco:toco -- \
 --std_values=128 \
 --change_concat_input_ranges=false \
 --allow_custom_ops
+
+
