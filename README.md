@@ -38,7 +38,16 @@ bazel run -c opt tensorflow/lite/toco:toco -- \
 --allow_custom_ops
 
 
-# How do we know which one is QUANTIZED and which one is floating :
+# How do we know which one is QUANTIZED and which one is floating ? :
+
+check your .pbtxt file for the QUANTIZED :
+graph_rewriter {
+  quantization {
+    delay: 1000
+    weight_bits: 8
+    activation_bits: 8
+  }
+}
 
 
 
