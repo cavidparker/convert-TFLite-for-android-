@@ -38,5 +38,8 @@ bazel run -c opt tensorflow/lite/toco:toco -- \
 --allow_custom_ops
 
 
+# How do we know which one is QUANTIZED and which one is floating :
+
+
 
 
