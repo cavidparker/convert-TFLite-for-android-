@@ -21,4 +21,16 @@ bazel  run -c opt  tensorflow/lite/toco:toco -- \
 --change_concat_input_ranges=false \
 --allow_custom_ops
 
+## step 3 : Run this code into tensorflow: /home/cavid/tensorflow ( here is my path) :
+### - change the input_file and output_file localion
+
+bazel run -c opt tensorflow/lite/toco:toco -- \
+--input_file=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/tflite/tflite_graph.pb \
+--output_file=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/tflite/result/detect.tflite \
+--input_shapes=1,300,300,3 \
+--input_arrays=normalized_input_image_tensor \
+--output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3'  \
+--inference_type=FLOAT \
+--allow_custom_ops
+
 
