@@ -5,11 +5,11 @@ python export_tflite_ssd_graph.py --pipeline_config_path=/home/cavid/Desktop/You
 ## Step 2 : clone the git anywhere in your computer:
 git clone git@github.com:tensorflow/tensorflow.git 
 
-## Note : For a quantized model, run this from the tensorflow/ directory
+# Note : For a quantized model, run this from the tensorflow/ directory
 
 
 ## step 3 : Run this code into tensorflow: /home/cavid/tensorflow ( here is my path) :
-### - change the input_file and output_file localion
+#### - change the input_file and output_file localion
 
 bazel  run -c opt  tensorflow/lite/toco:toco -- \
 --input_file=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/tflite/tflite_graph.pb \
