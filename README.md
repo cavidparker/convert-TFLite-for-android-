@@ -5,6 +5,8 @@ python export_tflite_ssd_graph.py --pipeline_config_path=/home/cavid/Desktop/You
 ## Step 2 : clone the git anywhere in your computer:
 git clone git@github.com:tensorflow/tensorflow.git 
 
+## Note : For a quantized model, run this from the tensorflow/ directory
+
 
 ## step 3 : Run this code into tensorflow: /home/cavid/tensorflow ( here is my path) :
 ### - change the input_file and output_file localion
@@ -21,6 +23,8 @@ bazel  run -c opt  tensorflow/lite/toco:toco -- \
 --change_concat_input_ranges=false \
 --allow_custom_ops
 
+# Note : For a floating point model, run this from the tensorflow/ directory :
+
 ## step 3 : Run this code into tensorflow: /home/cavid/tensorflow ( here is my path) :
 ### - change the input_file and output_file localion
 
@@ -32,5 +36,7 @@ bazel run -c opt tensorflow/lite/toco:toco -- \
 --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3'  \
 --inference_type=FLOAT \
 --allow_custom_ops
+
+
 
 
