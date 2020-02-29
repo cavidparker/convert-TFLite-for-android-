@@ -1,4 +1,4 @@
-# convert-tflite-for-android-
+# convert-tflite-for-android :-
 ## Step 1 : run python export_tflite_ssd_graph.py 
 python export_tflite_ssd_graph.py --pipeline_config_path=/home/cavid/Desktop/YouTube_object_detection/models/research/object_detection/training/ssd_mobilenet_v2_quantized_300x300_coco.config --trained_checkpoint_prefix=training/model.ckpt-70573  --output_directory=./tflite --add_postprocessing_op=true
 
